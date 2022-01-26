@@ -1,7 +1,9 @@
-const MONGO_DB_CONGIG = {
-                  DB: "mongodb://localhost/ecommerce-app-demo1",
+
+const MONGO_DB_CONFIG = {
+                  DB: "mongodb://127.0.0.1/ecommerce-app",
                   PAGE_SIZE: 10,
 };
 
-
-module.exports = { MONGO_DB_CONGIG, };
+module.exports = {
+  MONGO_DB_CONFIG,
+};

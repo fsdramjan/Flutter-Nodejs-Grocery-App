@@ -34,17 +34,8 @@ exports.create = (req, res, next) => {
    });
 };
 
-
-
- 
-
-
-
 exports.findAll = (req, res, next) => {
-                  
-       
-
-   var model = {
+                  var model = {
       categoryName: req.query.categoryName,
       pageSize: req.query.pageSize,
       page: req.query.page,

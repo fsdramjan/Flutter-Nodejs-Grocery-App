@@ -3,13 +3,13 @@
   "info": {
     "version": "1.0.0",
     "title": "Grocery App",
-    "description": "Grocery App - Flutter/NodeJS Series",
+    "description": "Grocery App - Flutter/NodeJs",
     "license": {
       "name": "MIT",
       "url": "https://opensource.org/licenses/MIT"
     }
   },
-  "host": "localhost:5000",
+  "host": "localhost:8000",
   "basePath": "/",
   "tags": [
     {
