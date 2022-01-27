@@ -9,16 +9,14 @@ exports.create = (req, res, next) => {
       if (err) {
          next(err);
       }
-      else {
+      else {    
          
-
-                                       
          const path = req.file != undefined ? req.file.path.replace(/\\/g, "/"
          ) : "";
 
-
          var model = {
-            categoryName: req.body.categoryName, categoryDescription: res.body.categoryDescription,
+            categoryName: req.body.categoryName,
+            categoryDescription: res.body.categoryDescription,
             categoryImage: path != "" ? "/" + path : "",
          };
 
@@ -27,7 +25,10 @@ exports.create = (req, res, next) => {
                return next(error);
             }
             else {
-               return res.status(200).send({ message: "Success", data: results, });
+               return res.status(200).send({  
+                  message: "Success",
+                  data: results,
+               });
             }
          });
       }

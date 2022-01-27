@@ -18,9 +18,9 @@ async function createCategory(params, callback) {
                   });
 
 }
+;
 
-
-async function getCategory(params, callback) {
+async function getCategories(params, callback) {
 
                   const categoryName = params.categoryName;
                   var condition = categoryName ? {
@@ -36,38 +36,39 @@ async function getCategory(params, callback) {
                   }).catch((error) => {
                                     return callback(error);
                   });
-}
+};
 
 async function getCategoryById(params, callback) {
-                  const categoryId = params.id;
-                  catagory.findById(catagoryId).then((response) => {
+                  const categoryId = params.categoryId;
+                  category.findById(categoryId).then((response) => {
                                     if (!response) callback("Not Found Category with Id" + categoryId);
                                     else callback(null, response);
                   }).catch((error) => {
                                     return callback(error);
                   });
-}
+};
 async function updateCategory(params, callback) {
-                  const categoryId = params.id;
-                  catagory.findByIdAndUpdate(catagoryId,params, {useFindAndModify:false}).then((response) => {
+                  const categoryId = params.categoryId;
+                  category.findByIdAndUpdate(categoryId,params, {useFindAndModify:false}).then((response) => {
                                     if (!response) callback("Not Found Category with Id" + categoryId);
                                     else callback(null, response);
                   }).catch((error) => {
                                     return callback(error);
                   });
-}async function deleteCategory(params, callback) {
-                  const categoryId = params.id;
-                  catagory.findByIdAndDelete(catagoryId).then((response) => {
+};
+async function deleteCategory(params, callback) {
+                  const categoryId = params.categoryId;
+                  category.findByIdAndDelete(categoryId).then((response) => {
                                     if (!response) callback("Not Found Category with Id" + categoryId);
                                     else callback(null, response);
                   }).catch((error) => {
                                     return callback(error);
                   });
-}
+};
 
 module.exports = {
                   createCategory,
-                  getCategory,
+                  getCategories,
                   getCategoryById,
                   updateCategory,
                   deleteCategory              

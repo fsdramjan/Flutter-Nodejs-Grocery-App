@@ -1,12 +1,12 @@
 const express = require("express");
-// const app = express();
-const app = require('express')();
+const app = express();
+// const app = require('express')();
 const mongoose = require("mongoose");
 const { MONGO_DB_CONFIG } = require("./config/app.config");
 const errors = require("./middleware/errors.js");
 const swaggerUi = require("swagger-ui-express"), swaggerDocument = require("./swagger.json");
 
-mongoose.Promise = global.Promise;
+mongoose.Promise =  global.Promise;
 mongoose
   .connect(MONGO_DB_CONFIG.DB, {
     useNewUrlParser: true,
